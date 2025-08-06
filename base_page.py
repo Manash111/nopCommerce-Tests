@@ -33,3 +33,6 @@ class BasePage:
 
     def get_url(self):
         return self.driver.current_url
+
+    def get_text(self, locator):
+        return self.wait.until(EC.visibility_of_element_located(locator)).text
