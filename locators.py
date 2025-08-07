@@ -48,3 +48,17 @@ input_search = (By.XPATH,"//input[@id='small-searchterms']")
 btn_search = (By.XPATH,"//button[normalize-space()='Search']")
 list_product = (By.CSS_SELECTOR,".product-item")
 noresult_msg = (By.CSS_SELECTOR,".no-result")
+
+
+#productDetails
+product_name = (By.CSS_SELECTOR,".product-name")
+product_description = (By.CSS_SELECTOR,".short-description")
+product_price = (By.CSS_SELECTOR,".product-price span")
+product_image = (By.XPATH,"//div[@class ='picture-gallery']//div[@class = 'picture']")
+
+#product link
+click_product = (By.XPATH, "//h2[@class = 'product-title']/a")
+
+
+btn_addToCart = (By.XPATH,"//button[@class='button-2 product-box-add-to-cart-button']")
+btn_addToCart_product_page = (By.XPATH,"//button[@class='button-1 add-to-cart-button']")
