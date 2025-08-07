@@ -62,3 +62,4 @@ click_product = (By.XPATH, "//h2[@class = 'product-title']/a")
 
 btn_addToCart = (By.XPATH,"//button[@class='button-2 product-box-add-to-cart-button']")
 btn_addToCart_product_page = (By.XPATH,"//button[@class='button-1 add-to-cart-button']")
+cart_quantity = (By.XPATH,"//span[@class='cart-qty']")
