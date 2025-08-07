@@ -31,3 +31,20 @@ input_email_login = (By.XPATH,"//input[@id='Email']")
 input_password_login = (By.XPATH,"//input[@id='Password']")
 checkbox_rememberMe = (By.XPATH,"//input[@id='RememberMe']")
 btn_login = (By.XPATH,"//button[normalize-space()='Log in']")
+
+
+#navigation TOP MENU ITEMS
+link_computer = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']")
+link_electronics = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Electronics']")
+link_apparel = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Apparel']")
+link_digitalDownloads = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Digital downloads']")
+link_books = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Books']")
+link_jewelry = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Jewelry']")
+link_giftcards = (By.XPATH,"//ul[@class='top-menu notmobile']//a[normalize-space()='Gift Cards']")
+
+#search
+
+input_search = (By.XPATH,"//input[@id='small-searchterms']")
+btn_search = (By.XPATH,"//button[normalize-space()='Search']")
+list_product = (By.CSS_SELECTOR,".product-item")
+noresult_msg = (By.CSS_SELECTOR,".no-result")
