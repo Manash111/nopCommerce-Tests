@@ -23,3 +23,18 @@ class TestCart(BaseTest):
         )
 
         print(f"Current cart items: {cart.get_cart_quantity()}")
+
+    def test_remove_from_cart(self):
+
+        # Initialize pages
+        cart = CartPage(self.driver)
+        cart.goto_cart()
+
+        # Remove product
+        is_empty = cart.remove_product_from_cart(0)
+        # Assertions
+        self.assertTrue(
+            is_empty,
+            "Cart did not empty after removal"
+        )
+        print("Cart successfully emptied")

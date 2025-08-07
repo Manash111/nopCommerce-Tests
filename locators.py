@@ -63,3 +63,9 @@ click_product = (By.XPATH, "//h2[@class = 'product-title']/a")
 btn_addToCart = (By.XPATH,"//button[@class='button-2 product-box-add-to-cart-button']")
 btn_addToCart_product_page = (By.XPATH,"//button[@class='button-1 add-to-cart-button']")
 cart_quantity = (By.XPATH,"//span[@class='cart-qty']")
+
+btn_goto_cart = (By.XPATH, "//span[@class='cart-label']")
+btn_remove_product = (By.XPATH, "//tbody//td[7]/button")
+# empty_cart_message = (By.XPATH,"//div[@class='no-data']")
+
+btn_shopping_cart_popup = (By.XPATH, "//*[@id='bar-notification']/div/p/a")

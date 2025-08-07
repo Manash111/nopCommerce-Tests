@@ -31,3 +31,39 @@ class CartPage(BasePage):
             return True
         except:
             return False
+
+    def goto_cart(self):
+        click_cart = self.wait.until(
+            EC.visibility_of_element_located(locators.btn_shopping_cart_popup)
+        )
+        click_cart.click()
+
+    def remove_product_from_cart(self,index):
+        """Removes product from cart and verifies cart is empty"""
+
+        # Get initial count (optional - for logging)
+        initial_count = self.get_cart_quantity()
+        print(f"Initial cart items: {initial_count}")
+
+        # Remove product
+        remove_product = self.wait.until(
+            EC.presence_of_all_elements_located(locators.btn_remove_product)
+        )
+        remove_product[index].click()
+
+        # Verification
+        return self._verify_cart_empty()
+
+    def _verify_cart_empty(self):
+        """Verifies cart is empty through multiple checks"""
+        try:
+            # Check counter shows (0)
+            self.wait.until(
+                lambda _: self.get_cart_quantity() == 0
+            )
+
+            assert "Your Shopping Cart is empty!" in self.driver.page_source
+            return True
+        except Exception as e:
+            print(f"Cart empty verification failed: {str(e)}")
+            return False
