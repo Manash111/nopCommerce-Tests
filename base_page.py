@@ -8,6 +8,10 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout=10)  # Default wait
 
+    def find(self, locator):
+        """Finds and returns a single element with explicit wait"""
+        return self.wait.until(EC.visibility_of_element_located(locator))
+
     def click(self, locator):
         """Click any element after waiting for it to be clickable."""
         self.wait.until(EC.element_to_be_clickable(locator)).click()
