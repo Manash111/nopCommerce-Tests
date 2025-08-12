@@ -2,7 +2,7 @@ import unittest
 
 import locators
 from pages.homepage_page import HomePage
-from base_test import BaseTest
+from basePage.base_test import BaseTest
 
 
 class TestHomePage(BaseTest):
