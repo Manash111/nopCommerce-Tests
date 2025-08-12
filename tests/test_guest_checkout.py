@@ -1,7 +1,7 @@
 import unittest
 
 import locators
-from base_test import BaseTest
+from basePage.base_test import BaseTest
 from pages.cart_page import CartPage
 from pages.search_page import SearchPage
 from pages.checkout_page import CheckoutPage
