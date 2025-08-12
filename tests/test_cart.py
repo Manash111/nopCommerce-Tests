@@ -1,7 +1,5 @@
-import time
-import unittest
 import locators
-from base_test import BaseTest
+from basePage.base_test import BaseTest
 from pages.search_page import SearchPage
 from pages.cart_page import CartPage
 
