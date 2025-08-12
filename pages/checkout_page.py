@@ -1,4 +1,4 @@
-from base_page import BasePage
+from basePage.base_page import BasePage
 import locators
 from selenium.webdriver.support.select import Select
 import time

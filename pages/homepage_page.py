@@ -1,6 +1,5 @@
-from base_page import BasePage
+from basePage.base_page import BasePage
 import locators
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class HomePage(BasePage):
