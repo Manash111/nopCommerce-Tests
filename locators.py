@@ -69,3 +69,53 @@ btn_remove_product = (By.XPATH, "//tbody//td[7]/button")
 # empty_cart_message = (By.XPATH,"//div[@class='no-data']")
 
 btn_shopping_cart_popup = (By.XPATH, "//*[@id='bar-notification']/div/p/a")
+
+
+#Checkout
+
+checkbox_termsOfService = (By.XPATH,"//input[@id='termsofservice']")
+btn_checkout = (By.XPATH,"//button[@id='checkout']")
+
+#checkout as guest
+btn_checkout_guest = (By.XPATH,"//button[normalize-space()='Checkout as Guest']")
+
+#billing address
+
+input_firstName_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_FirstName']")
+input_lastName_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_LastName']")
+input_email_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_Email']")
+input_companyName_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_Company']")
+select_country_guestCheckout = (By.XPATH,"//select[@id='BillingNewAddress_CountryId']")
+select_state_guestCheckout = (By.XPATH,"//select[@id='BillingNewAddress_StateProvinceId']")
+input_city_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_City']")
+input_address1_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_Address1']")
+input_address2_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_Address2']")
+input_zipCode_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_ZipPostalCode']")
+input_phoneNumber_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_PhoneNumber']")
+input_faxNumber_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_FaxNumber']")
+btn_continue = (By.XPATH, "//*[@id='billing-buttons-container']/button[2]")
+#shipping method
+radio_ground = (By.XPATH, "//input[@id='shippingoption_0']")
+radio_air =(By.XPATH, "input[@id='shippingoption_0']")
+radio_twoDayAir = (By.XPATH,"input[@id='shippingoption_2']")
+btn_continue1 = (By.XPATH,"//button[@class='button-1 shipping-method-next-step-button']")
+
+#payemnt method
+radio_check = (By.XPATH, "//input[@id='paymentmethod_0']")
+radio_creditCard = (By.XPATH, "//input[@id='paymentmethod_1']")
+btn_continue2 = (By.XPATH, "//button[@class='button-1 payment-method-next-step-button']")
+
+#credit card
+
+select_card_type = (By.XPATH, "//select[@id='CreditCardType']")
+input_cardHolder_name = (By.XPATH, "//input[@id='CardholderName']")
+input_cardNumber = (By.XPATH, "//input[@id='CardNumber']")
+select_exp_month = (By.XPATH, "//select[@id='ExpireMonth']")
+select_exp_year = (By.XPATH, "//select[@id='ExpireYear']")
+input_cardCode = (By.XPATH, "//input[@id='CardCode']")
+
+btn_confirm = (By.XPATH, "//button[normalize-space()='Confirm']")
+
+btn_continue3 = (By.XPATH,"//button[normalize-space()='Continue']")
+
+order_confirmation = (By.XPATH,"//strong[normalize-space()='Your order has been successfully processed!']")
