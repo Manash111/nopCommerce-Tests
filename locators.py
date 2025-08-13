@@ -93,17 +93,17 @@ input_address2_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_Address
 input_zipCode_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_ZipPostalCode']")
 input_phoneNumber_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_PhoneNumber']")
 input_faxNumber_guestCheckout = (By.XPATH,"//input[@id='BillingNewAddress_FaxNumber']")
-btn_continue = (By.XPATH, "//*[@id='billing-buttons-container']/button[2]")
+btn_continue_to_shipping_method = (By.XPATH, "//*[@id='billing-buttons-container']/button[2]")
 #shipping method
 radio_ground = (By.XPATH, "//input[@id='shippingoption_0']")
 radio_air =(By.XPATH, "input[@id='shippingoption_0']")
 radio_twoDayAir = (By.XPATH,"input[@id='shippingoption_2']")
-btn_continue1 = (By.XPATH,"//button[@class='button-1 shipping-method-next-step-button']")
+btn_continue_to_payment = (By.XPATH,"//button[@class='button-1 shipping-method-next-step-button']")
 
 #payemnt method
 radio_check = (By.XPATH, "//input[@id='paymentmethod_0']")
 radio_creditCard = (By.XPATH, "//input[@id='paymentmethod_1']")
-btn_continue2 = (By.XPATH, "//button[@class='button-1 payment-method-next-step-button']")
+btn_continue_to_payment_info = (By.XPATH, "//button[@class='button-1 payment-method-next-step-button']")
 
 #credit card
 
@@ -116,6 +116,7 @@ input_cardCode = (By.XPATH, "//input[@id='CardCode']")
 
 btn_confirm = (By.XPATH, "//button[normalize-space()='Confirm']")
 
-btn_continue3 = (By.XPATH,"//button[normalize-space()='Continue']")
+btn_continue_to_confirm = (By.XPATH,"//*[@id='payment-info-buttons-container']/button")
 
 order_confirmation = (By.XPATH,"//strong[normalize-space()='Your order has been successfully processed!']")
+
