@@ -48,6 +48,8 @@ class TestGuestCheckout(BaseTest):
                 'exp_year': '2025',
                 'code': '123'
             })
+        else:
+            checkout_page.check_method()
 
         confirmation_text = checkout_page.confirm_order()
 
