@@ -79,3 +79,26 @@ class CheckoutPage(BasePage):
         return self.wait.until(
             EC.visibility_of_element_located(locators.order_confirmation)
         ).text
+
+    def submit_empty_billing_form(self):
+        """Sumbits empty billing form and returns error messages"""
+        # Start checkout
+        self.start_guest_checkout()
+
+        # Skip all fields and click Continue
+        self.click(locators.btn_continue_to_shipping_method)
+
+        # Return all error messages
+        return {
+            'first_name': self.get_text(locators.first_name_error),
+            'last_name': self.get_text(locators.last_name_error),
+            'email': self.get_text(locators.email_error),
+            'city': self.get_text(locators.city_error),
+            'address': self.get_text(locators.address_error),
+            'zip': self.get_text(locators.zip_error),
+            'phone': self.get_text(locators.phone_error)
+        }
+
+    def get_required_field_count(self):
+        """Returns number of validation errors displayed"""
+        return len(self.driver.find_elements(*locators.REQUIRED_FIELD_ERROR))
