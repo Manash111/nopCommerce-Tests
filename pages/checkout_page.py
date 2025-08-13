@@ -36,7 +36,7 @@ class CheckoutPage(BasePage):
             self.type_text(locators.input_zipCode_guestCheckout, data['zip_code'])
             self.type_text(locators.input_phoneNumber_guestCheckout, data['phone'])
 
-            self.click(locators.btn_continue)
+            self.click(locators.btn_continue_to_shipping_method)
         except Exception as e:
             print(f"Error in fill_billing_address: {str(e)}")
             raise
@@ -49,7 +49,7 @@ class CheckoutPage(BasePage):
             "2day": locators.radio_twoDayAir
         }
         self.click(methods[method.lower()])
-        self.click(locators.btn_continue1)
+        self.click(locators.btn_continue_to_payment)
 
     def select_payment_method(self, method="check"):
         """Selects payment method (check/credit card)"""
@@ -58,7 +58,10 @@ class CheckoutPage(BasePage):
             "credit": locators.radio_creditCard
         }
         self.click(methods[method.lower()])
-        self.click(locators.btn_continue2)
+        self.click(locators.btn_continue_to_payment_info)
+
+    def check_method(self):
+        self.click(locators.btn_continue_to_confirm)
 
     def fill_credit_card_details(self, card_data):
         """Fills credit card details (if payment method is credit card)"""
@@ -68,7 +71,7 @@ class CheckoutPage(BasePage):
         Select(self.driver.find_element(locators.select_exp_month)).select_by_visible_text(card_data['exp_month'])
         Select(self.driver.find_element(locators.select_exp_year)).select_by_visible_text(card_data['exp_year'])
         self.type_text(locators.input_cardCode, card_data['code'])
-        self.click(locators.btn_continue3)
+        self.click(locators.btn_continue_to_confirm)
 
     def confirm_order(self):
         """Finalizes order and returns confirmation text"""
