@@ -80,6 +80,18 @@ class CheckoutPage(BasePage):
             EC.visibility_of_element_located(locators.order_confirmation)
         ).text
 
+    def continue_with_no_details(self):
+        self.click(locators.btn_continue_to_shipping_method)
+
+    def close_alert(self):
+        """Closes alert popup if present"""
+        try:
+            alert = self.driver.switch_to.alert  # For JavaScript alerts
+            alert.dismiss()  # Or alert.accept() if needed
+            print("alert popup closed")
+        except:
+            pass  # No alert found
+
     def submit_empty_billing_form(self):
         """Sumbits empty billing form and returns error messages"""
         # Start checkout
